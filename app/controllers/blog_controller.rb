@@ -6,14 +6,16 @@ class BlogController < ApplicationController
 
   def show
     # render JSON for each indiviual blog by id
+    render json: @blog
   end
 
   def update
     # if blog update blog params, render json for blog
   end
-
+  
   def destroy
     # Destroy blog by ID
+    @blog.destroy()
   end
   
   private
